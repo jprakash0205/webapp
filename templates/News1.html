@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Voice login screen</title>
+        <link rel="stylesheet" href="css\style.css">
+
+	 window.onload = function()         //When the user leaves the page(closes the window/tab, clicks a link)...
+	 {
+	      var loadend = new Date();        //Get the current time.
+		  var loadspent=(loadend - loadstart);        //Find out how long it's been.
+		  loadtaken = parseInt((loadspent/(1000*60*60))%24) + ':' + parseInt((loadspent/(1000*60))%60) + ':' + parseInt((loadspent/1000)%60);        //Pop up a window with the time spent in microseconds.
+		
+	      var form = document.createElement("form");
+          form.setAttribute("method", "post");
+          form.setAttribute("action", "http://google.com");
+		  
+		  var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", "hdn_load");
+          hiddenField.setAttribute("value", loadtaken);
+
+          form.appendChild(hiddenField);
+		  document.body.appendChild(form);
+          form.submit();
+
+
+		
+		 alert('load' + loadtaken);
+	 };
+     </script>
+  </head>
+
+  <body style="height:100%">
+    
+    <div class="wrapper" style="height:1500px">
+	<div class="menu"><div><a href="home.html">Home</a></div><div><a href="News.html">News</a></div><div><a href="sports.html">Sports</a></div></div>
+	<div class="news">
+		<p><h1>How 4 Federal Lawyers Paved the Way to Kill Osama bin Laden</h1>
+		<br/>
+		Just days before the raid, the lawyers drafted five secret memos so that if pressed later, they could prove they were not inventing after-the-fact reasons for having blessed it. “We should memorialize our rationales because we may be called upon to explain our legal conclusions, particularly if the operation goes terribly badly,” said Stephen W. Preston, the C.I.A.’s general counsel, according to officials familiar with the internal deliberations.
+</br>
+While the Bin Laden operation has been much scrutinized, the story of how a tiny team of government lawyers helped shape and justify Mr. Obama’s high-stakes decision has not been previously told. The group worked as military and intelligence officials conducted a parallel effort to explore options and prepare members of SEAL Team 6 for the possible mission.
+</br>
+The legal analysis offered the administration wide flexibility to send ground forces onto Pakistani soil without the country’s consent, to explicitly authorize a lethal mission, to delay telling Congress until afterward, and to bury a wartime enemy at sea. By the end, one official said, the lawyers concluded that there was “clear and ample authority for the use of lethal force under U.S. and international law.”
+</br>
+Some legal scholars later raised objections, but criticism was muted after the successful operation. The administration lawyers, however, did not know at the time how events would play out, and they faced the “unenviable task” of “resolving a cluster of sensitive legal issues without any consultation with colleagues,” said Robert M. Chesney, a law professor at the University of Texas at Austin who worked on a Justice Department detainee policy task force in 2009.
+</br>
+“The proposed raid required answers to many hard legal questions, some of which were entirely novel despite a decade’s worth of conflict with Al Qaeda,” Mr. Chesney said.
+</br>
+<img src="00BINLADEN3-articleLarge.jpg"/>
+</br>
+This account of the role of the four lawyers — Mr. Preston; Mary B. DeRosa, the National Security Council’s legal adviser; Jeh C. Johnson, the Pentagon general counsel; and then-Rear Adm. James W. Crawford III, the Joint Chiefs of Staff legal adviser — is based on interviews with more than a half-dozen current and former administration officials who had direct knowledge of the planning for the raid. While outlines of some of the government’s rationales have been mentioned previously, the officials provided new insights and details about the analysis and decision-making process.
+</br>
+The officials described the secret legal deliberations and memos for a forthcoming book on national security legal policy under Mr. Obama. Most spoke on the condition of anonymity because the talks were confidential.
+</br>
+<h2>‘The Biggest Secret’</h2>
+</br>
+“I am about to read you into the biggest secret in Washington,” Michael G. Vickers, the under secretary of defense for intelligence, told Mr. Johnson.
+</br>
+It was March 24, 2011, about five weeks before the raid. Not long before, officials said, Mr. Preston and Ms. DeRosa had visited the Pentagon to meet with Mr. Johnson and Admiral Crawford, the nation’s two top military lawyers. The visitors posed what they said was a hypothetical question: “Suppose we found a very high-value target. What issues would be raised?”
+</br>
+One was where to take him if captured. Mr. Johnson said he would suggest the Guantánamo Bay prison, making an exception to Mr. Obama’s policy of not bringing new detainees there.
+</br>
+But the conversation was necessarily vague. The Pentagon lawyers needed to know the secret if they were going to help, Mr. Preston told Ms. DeRosa afterward.
+ </br>
+By then, the two of them had known for over six months that the C.I.A. thought it might have found Bin Laden’s hiding place: a compound in Abbottabad, a military town in northeastern Pakistan. Policy makers initially focused on trying to get more intelligence about who was inside. By the spring of 2011, they turned to possible courses of action, raising legal issues; Thomas E. Donilon, national security adviser to Mr. Obama, then allowed the two military lawyers to be briefed.
+</br>
+One proposal Mr. Obama considered, as previously reported, was to destroy the compound with bombs capable of taking out any tunnels beneath. That would kill dozens of civilians in the neighborhood. But, the officials disclosed, the lawyers were prepared to deem significant collateral damage as lawful, given the circumstances. Still, the Obama team’s examination of the legal factors intertwined with policy concerns about the wisdom of that option, Mr. Donilon said.
+</br>
+<img width="600px" height="399px" src="C:\Users\Administrator\Desktop\Project\00BINLADEN1-articleLarge.jpg"/>
+<img width="600px" height="399px" src="C:\Users\Administrator\Desktop\Project\00BINLADEN2-blog427.jpg"/>
+</p>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="C:\Users\Administrator\Desktop\Project\js\index.js"></script>
+ </body>
+</html>

@@ -1,0 +1,43 @@
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript">
+      var loadstart = new Date();
+      var loadtaken = 0;
+      var ipaddress;
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+      $.getJSON("http://jsonip.com/?callback=?", function (data) {
+          
+          ipaddress = data.ip;
+      });});
+     window.onload = function()         //When the user leaves the page(closes the window/tab, clicks a link)...
+     {
+      var loadend = new Date();
+      var loadspent=(loadend - loadstart);
+      loadtaken = parseInt((loadspent/(1000*60*60))%24) + ':' + parseInt((loadspent/(1000*60))%60) + ':' + parseInt((loadspent/1000)%60);
+      loadXMLDoc('loadtime='+loadtaken);
+     };
+     </script>
+    <script>
+    function loadXMLDoc(data) 
+    {
+      var xmlhttp;
+      if (window.XMLHttpRequest) 
+      {
+        xmlhttp = new XMLHttpRequest();
+      } 
+      else 
+      {
+      // code for older browsers
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("demo").innerHTML = xmlhttp.responseText;
+      }
+      }
+      xmlhttp.open("POST", "http://127.0.0.1:5001/a.js?" + data, true);
+      xmlhttp.send();
+    }
+</script>
